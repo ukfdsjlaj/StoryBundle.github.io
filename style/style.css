@@ -8,7 +8,7 @@
 /*Import font style*/
 @font-face {
   font-family: 'PixelFont';
-  src: url(/sources/font/PixelifySans-VariableFont_wght.ttf);
+  src: url("/sources/font/PixelifySans-VariableFont_wght.ttf");
 }
 
 /*Default setting for canvas*/
@@ -260,6 +260,7 @@ To Center the canvas in the center and put the legend in the right of the cenete
   width: inherit;
   border-radius: 2.25vw;
 }
+
 
 
 
