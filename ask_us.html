@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>StoryBundle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="title">
+            <a href="index.html"><h1>STORY BUNDLE</h1></a>
+        </div>
+
+        <div class="canvas-extra-container">
+            <div class="canvas-container">
+                <canvas id="pixelBackground"></canvas>
+            </div>
+        
+            <div class="extra-container">
+                <form action="https://formspree.io/f/xyzdoggj" method="POST">
+                    <h2>Send A Message!</h2>
+                    
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="example@example.com" required>
+                    </div>
+                    <div>
+                        <label>Message</label>
+                        <textarea name="message" placeholder="Please leave us a message here!" required></textarea>
+                    </div>  
+                    
+                    <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
+                        <label>Leave blank if you are human</label>
+                        <input type="text" name="website_field_123" autocomplete="off" tabindex="-1">
+                    </div>
+                
+                    <button type="submit">Send</button>
+                </form> 
+            </div>
+        </div>
+        
+
+        
+
+        <script src="style/draw.js"></script>
+        <script src="style/house.js"></script>
+
+        <img id="floor1" src="sources/Image/floortile1.PNG" style="display: none;">
+        <img id="floor2" src="sources/Image/floortile2.PNG" style="display: none;">
+        <img id="floor3" src="sources/Image/floortile3.PNG" style="display: none;">
+        <img id="floor4" src="sources/Image/floortile4.PNG" style="display: none;">
+        <img id="props" src="sources/Image/props.PNG" style="display: none;">
+        <img id="tree" src="sources/Image/tree.PNG" style="display: none;">
+        <img id="road" src="sources/Image/road.PNG" style="display: none;">
+    </body>
+</html>

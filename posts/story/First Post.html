@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>StoryBundle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style/style.css">
+    </head>
+    <body>
+        <div class="title">
+            <a href="/index.html"><h1>STORY BUNDLE</h1></a>
+        </div>
+
+        <div class="parent-container">
+            <div class="story-gallery-container">
+                <h1 class="story-gallery-title">
+                    First post
+                </h1>
+
+                <h1 class="author-date">
+                    <a href="https://www.instagram.com/meowpawprint/">
+                        <img src="/sources/Image/icons8-instagram-24.png">
+                    </a>
+                    StoryBundle&emsp;17 September 2025
+                </h1>
+                
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="paragraph-container">
+                    <p class="paragraph"> 
+                        Hello, this is the first post. Testing if everything works as expected. If you 
+                        have any questions or found any bugs, please let us know by sending us email.
+                        You can contact us by redirecting to Contact page (By clicking the green house).
+                        Then send us a message.
+                    </p>
+                    <p class="paragraph">
+                        Second Paragraph.<br>
+                        hello. This is the second paragraph. testing if everything is working.
+                        So far everything is working as it should. Nothing wrong with the page. 
+                    </p>
+                </div>    
+            </div> 
+        </div>
+
+        <script>
+        function setMaxLength(paragraph, maxlength) {
+            const text = paragraph.innerText.trim();
+            let result = "";
+            let i = 0;
+
+            while (i < text.length) {
+                let brIndex = brPlacement(text, i, maxlength);
+
+                result += text.substring(i, brIndex) + "<br>";
+                i = brIndex;
+
+                // skip spaces after the break
+                while (text[i] === " ") {
+                    i++;
+                }
+            }
+
+            paragraph.innerHTML = result;
+        }
+
+        function brPlacement(text, start, maxlength) {
+            let end = Math.min(start + maxlength, text.length);
+            let brIndex = end;
+
+            // If not at end of text and not breaking on a space
+            if (end < text.length && text[end] !== " ") {
+                // look backward for last space
+                let lastSpace = text.lastIndexOf(" ", end);
+                if (lastSpace > start) {
+                    brIndex = lastSpace;
+                } else {
+                    // no space before, look forward for next space
+                    let nextSpace = text.indexOf(" ", end);
+                    if (nextSpace !== -1) {
+                        brIndex = nextSpace;
+                    }
+                }
+            }
+
+            return brIndex;
+        }
+
+        setMaxLength(document.querySelector('.paragraph'), 72);
+        </script>
+    </body>
+</html>

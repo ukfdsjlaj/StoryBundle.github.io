@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>StoryBundle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="title">
+            <a href="index.html"><h1>STORY BUNDLE</h1></a>
+        </div>
+
+        <div class="maincontainer">
+            <canvas id="pixelBackground" style="float: left;"></canvas> 
+            <!--the canvas is floated to the left so the legend can be placed to the right of the canvas-->
+        </div>
+
+        <div class="legendContainer">
+            <canvas id="legend"></canvas>
+            <div>
+                <h5 style="color: lightblue;">Drawing</h5>
+                <h5 style="color: maroon;">Story</h5>
+                <h5 style="color: yellowgreen;">Contact</h5>
+            </div>
+        </div>
+    
+        <img id="floor1" src="sources/Image/floortile1.PNG" style="display: none;">
+        <img id="floor2" src="sources/Image/floortile2.PNG" style="display: none;">
+        <img id="floor3" src="sources/Image/floortile3.PNG" style="display: none;">
+        <img id="floor4" src="sources/Image/floortile4.PNG" style="display: none;">
+        <img id="props" src="sources/Image/props.PNG" style="display: none;">
+        <img id="tree" src="sources/Image/tree.PNG" style="display: none;">
+        <img id="road" src="sources/Image/road.PNG" style="display: none;">
+        
+        <script src="style/draw.js"></script>
+        <script src="style/house.js"></script>
+
+    </body>
+</html>

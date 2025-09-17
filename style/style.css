@@ -1,0 +1,266 @@
+/*Default setting for every pages*/
+* {
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  font-family: 'PixelFont';
+}
+
+/*Import font style*/
+@font-face {
+  font-family: 'PixelFont';
+  src: url(/sources/font/PixelifySans-VariableFont_wght.ttf);
+}
+
+/*Default setting for canvas*/
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  margin: 0;
+}
+
+h5 {
+  font-size: 0.62vw;
+}
+
+form {
+  height: inherit;
+}
+
+
+#pixelBackground {
+  border-radius: 3.75vw; 
+}
+
+/*Centering the title & title related css*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.title h1{
+  display: inline;
+  font-size: 3.5vw;
+  padding: 0;
+}
+
+/*Styling for the Title(STORYBUNDLE) since the title is a home button*/
+.title a {
+  text-decoration: none;
+  color: black;
+  margin: 2vw 0 2vw 0;
+}
+
+
+/*index.html css
+To Center the canvas in the center and put the legend in the right of the cenetered canvas*/
+.maincontainer {
+  max-width: fit-content; /*Width of the div is exactly the same as the size of the canvas so the canvas can be the center of the page*/
+  margin: auto;
+}
+
+/*index.html small canvas css*/
+.legendContainer {
+  height: fit-content;
+  display: flex;
+  padding: 3.5vw 0 0 2.5vw;
+}
+
+
+/*ask_us.html css*/
+.canvas-extra-container { /*One is centered in the left, other is centered in the right*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.canvas-container { /*Center the canvas to the center of the div*/
+  margin: auto;
+  height: 35vw;
+}
+
+.extra-container { /*Match the width and height same as the canvas, text are aligned to the left*/
+  height: 35vw;
+  width: 35vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.extra-container h2 {
+  font-size: 2vw;
+  margin: 0;
+}
+
+.extra-container label{
+  display: block;
+  margin-top: 1vw;
+  margin-bottom: 0.2vw;
+  font-size: 1vw;
+}
+
+.extra-container input, textarea{
+  width: 17.5vw;
+  font-size: 1vw;
+  border-radius: 0.3vw;
+  border-color: black;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.extra-container textarea{
+  width: 35vw;
+  height: 20vw;
+}
+
+.extra-container button {
+  font-size: 1vw;
+  width: 5vw;
+  margin-top: 1vw;
+  border-radius: 0.3vw;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.extra-container button:hover {
+  scale: 1.1;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+/*pagination css*/
+.pagination {
+  position: absolute;
+  bottom: 0;
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5vw;
+  list-style: none;
+}
+
+.page, .icon{
+  width: 2vw;
+  height: 2vw;
+  font-size: 1.3vw;
+  border-radius: 50%;
+  user-select: none; /*This prevent users from selecting list items(click and drag)*/
+  cursor: pointer;
+  /*These two center the text inside the border which appears white when mouse is hovering. Wihtout these css the text would stay on the left-bottom of the circle*/
+  text-align: center;
+  line-height: 2vw;
+}
+
+.page:hover, .icon:hover{
+  background-color:#9F8C76;
+  transition-duration: 1.25s;
+}
+
+.page.active {
+  background-color: burlywood;
+}
+
+/*Gallery and Story css*/
+.post-container {
+  height: 33vw;
+  width: inherit;
+  display: grid;
+}
+
+.posts, .story-posts {
+  font-size: 0.7vw;
+  height: 33vw;
+  list-style: none;
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: repeat(3, minmax(2vw, 1fr));
+  gap: 0.5vw;
+}
+
+.posts a, .story-posts a {
+  text-decoration: none;
+  color: black;
+}
+
+.post, .story-post {
+  display: none;
+}
+
+.post.show, .story-post.show {
+  display: block;
+}
+
+.post:hover, .story-post:hover {
+  scale: 1.04;
+  transition-duration: 1s;
+}
+
+.thumbnail {
+  background-color: black;
+  height: 14vw;
+  width: 11.5vw;
+  border-radius: 2.25vw;
+}
+
+.post-title {
+  margin: 0;
+}
+
+/*gallery and story posts css*/
+.parent-container {
+  display: flex;
+  justify-content: center;
+}
+.story-gallery-container {
+  max-width: 50vw;
+}
+
+.story-gallery-title {
+  font-size: 2.5vw;
+  font-family: cursive;
+}
+
+.author-date {
+  font-size: 1vw;
+  font-family: cursive;
+}
+
+.author-date a{
+  text-decoration: none;
+}
+
+.author-date img{
+  width: 1vw;
+  height: 1vw;
+}
+
+.author-date img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
+
+.paragraph {
+  font-family: cursive;
+  font-size: 1.25vw;
+}
+
+.post img, .story-post img {
+  height: inherit;
+  width: inherit;
+  border-radius: 2.25vw;
+}
+
+
+
+
